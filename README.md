@@ -24,8 +24,8 @@ But another use that can be made of this software is to create or delete automat
         InitialSessionState iss = InitialSessionState.CreateDefault2();
         var shell = PowerShell.Create(iss);
         shell.Commands.AddScript(@"Add-DnsServerPrimaryZone -Name " + args[1] + " -ZoneFile " + args[1] + ".dns");
-        shell.Commands.AddScript("Add-DnsServerResourceRecordA -Name \"@\" -ZoneName \"" + args[1] + "\" -AllowUpdateAny -IPv4Address \"37.156.145.183\" -TimeToLive 01:00:00");
-        shell.Commands.AddScript("Add-DnsServerResourceRecordA -Name \"www\" -ZoneName \"" + args[1] + "\" -AllowUpdateAny -IPv4Address \"37.156.145.183\" -TimeToLive 01:00:00");
+        shell.Commands.AddScript("Add-DnsServerResourceRecordA -Name \"@\" -ZoneName \"" + args[1] + "\" -AllowUpdateAny -IPv4Address \"37.156.145.173\" -TimeToLive 01:00:00");
+        shell.Commands.AddScript("Add-DnsServerResourceRecordA -Name \"www\" -ZoneName \"" + args[1] + "\" -AllowUpdateAny -IPv4Address \"37.156.145.173\" -TimeToLive 01:00:00");
         try
         {
             var results = shell.Invoke();
