@@ -31,8 +31,8 @@ namespace ServiceDns
 
 
                 shell.Commands.AddScript(@"Add-DnsServerPrimaryZone -Name " + textBox1.Text.Trim() + " -ZoneFile " + textBox1.Text.Trim() + ".dns");
-                shell.Commands.AddScript("Add-DnsServerResourceRecordA -Name \"@\" -ZoneName \"" + textBox1.Text.Trim() + "\" -AllowUpdateAny -IPv4Address \"37.156.145.183\" -TimeToLive 01:00:00");
-                shell.Commands.AddScript("Add-DnsServerResourceRecordA -Name \"www\" -ZoneName \"" + textBox1.Text.Trim() + "\" -AllowUpdateAny -IPv4Address \"37.156.145.183\" -TimeToLive 01:00:00");
+                shell.Commands.AddScript("Add-DnsServerResourceRecordA -Name \"@\" -ZoneName \"" + textBox1.Text.Trim() + "\" -AllowUpdateAny -IPv4Address \"37.156.145.173\" -TimeToLive 01:00:00");
+                shell.Commands.AddScript("Add-DnsServerResourceRecordA -Name \"www\" -ZoneName \"" + textBox1.Text.Trim() + "\" -AllowUpdateAny -IPv4Address \"37.156.145.173\" -TimeToLive 01:00:00");
                 
                 try
                 {
